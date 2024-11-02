@@ -2,19 +2,12 @@
 
 import 'dart:io';
 
-class Shape {
+abstract class Shape {
   double width;
   double height;
-
   Shape({required this.width, required this.height});
-
-  double calculateArea() {
-    return 0;
-  }
-
-  void draw() {
-    print("invald");
-  }
+  double calculateArea();
+  void draw();
 }
 
 class Rectangular extends Shape {
@@ -64,5 +57,12 @@ void main(){
   Triangle triangle =Triangle(width: 3, height: 4);
   triangle.draw();
   print(triangle.calculateArea());
+ print("----------------------------------------------------");
+
+ //? make polymorphism ==> pointer parent class ==> object child class 
+  Shape shapeRectangular = Rectangular(height: 5,width:10 );
+  shapeRectangular.draw();
+  print(shapeRectangular.calculateArea());
+
 
 }
