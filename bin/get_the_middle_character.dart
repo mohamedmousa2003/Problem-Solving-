@@ -10,7 +10,7 @@ If the string's length is even, return the middle 2 characters.
 "A" --> "A"
  */
 // import 'dart:js_util';
-
+import 'dart:io';
 String getMiddle(String s) {
   List<String> w = s.split("");
   if(w.length.isOdd ){
@@ -24,6 +24,7 @@ String getMiddle(String s) {
   // return s.length.isOdd ? s[middleIndex] : s.substring(middleIndex - 1, middleIndex + 1);
 }
 void main(){
-  String name ="middle";
-  print(getMiddle(name));
+  print("please enter text");
+  String text = stdin.readLineSync()!;
+  print(getMiddle(text));
 }
