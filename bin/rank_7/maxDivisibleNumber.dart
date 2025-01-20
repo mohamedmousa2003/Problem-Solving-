@@ -1,10 +1,9 @@
-int maxMultiple(int divisor, int bound) {
-  return bound - (bound % divisor);
+List<int> replaceNegativesWithAbs(List<int> numbers) {
+  // Create a new list where each negative number is replaced with its absolute value
+  List<int> result = numbers.map((number) => number.isNegative ?? number.abs() : number).toList();
+  return result;
 }
-
-void main() {
-  // Test cases
-  print(maxMultiple(2, 7));  // Output: 6
-  print(maxMultiple(10, 50));  // Output: 50
-  print(maxMultiple(3, 14));  // Output: 12
+void main(){
+  List<int> y =[1,-1,1];
+  print(replaceNegativesWithAbs(y));
 }

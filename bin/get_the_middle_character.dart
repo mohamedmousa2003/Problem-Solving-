@@ -12,12 +12,12 @@ If the string's length is even, return the middle 2 characters.
 // import 'dart:js_util';
 import 'dart:io';
 String getMiddle(String s) {
-  List<String> w = s.split("");
+  List<String> w = s.split(""); // o(n)
   if(w.length.isOdd ){
-    return w[w.length~/2].toString();
+    return w[w.length~/2];
   }
  else{
-   return w[w.length~/2 -1 ] + w[w.length~/2 ].toString();
+   return w[w.length~/2 -1 ] + w[w.length~/2 ];
  }
   //? Another solution
   // final middleIndex = s.length ~/ 2;
